@@ -1,0 +1,39 @@
+{
+  "name": "opensearch-scripts",
+  "version": "1.0.0",
+  "description": "Fast and easy to use opensearch connection and operations scripts",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "create:index": "ts-node src/index/create.ts",
+    "get:index": "ts-node src/index/get.ts",
+    "list:index": "ts-node src/index/list.ts",
+    "delete:index": "ts-node src/index/delete.ts",
+    "create:doc": "ts-node src/document/create.ts",
+    "query:doc": "ts-node src/document/query.ts",
+    "lint": "eslint . --ext .ts --fix"
+  },
+  "keywords": [
+    "opensearch",
+    "aws",
+    "search",
+    "engine"
+  ],
+  "author": "Andrea Speziale",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/credential-providers": "^3.301.0",
+    "@opensearch-project/opensearch": "^2.2.0",
+    "aws4": "^1.12.0",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.1",
+    "@types/aws4": "^1.11.2",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}

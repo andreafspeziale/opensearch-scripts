@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "EditorConfig.EditorConfig",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-vscode-remote.remote-ssh"
+  ]
+}
