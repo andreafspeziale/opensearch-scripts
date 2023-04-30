@@ -5,10 +5,16 @@ Fast and easy to use opensearch connection and operations scripts
 ## Quickstart
 
 - `$ cp ./env/.env.development .env`
+- `$ cp ./src/config.example.ts ./src/config.ts`
+
+> Eventually reload the TS server
+
 - `$ npm i`
 - `$ npm run create:index`
 - `$ npm run create:doc`
 - `$ npm run query:doc`
+
+Check the available scripts in the `package.json` scripts section.
 
 ## Example
 

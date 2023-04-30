@@ -2,3 +2,4 @@ dev-ws
 .env
 dist
 node_modules
+config.ts
