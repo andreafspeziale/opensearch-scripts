@@ -6,6 +6,7 @@ Fast and easy to use opensearch connection and operations scripts
 
 - `$ cp ./env/.env.development .env`
 - `$ cp ./src/config.example.ts ./src/config.ts`
+- `$ docker compose up -d`
 
 > Eventually reload the TS server
 
@@ -19,6 +20,10 @@ Check the available scripts in the `package.json` scripts section.
 ## Example
 
 ![example](./example.png)
+
+## Docker
+
+The docker compose has been extracted and simplified from the [official documentation](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/docker/#sample-docker-compose-file-for-development).
 
 ### Environment
 
