@@ -2,7 +2,19 @@
   "name": "opensearch-scripts",
   "version": "1.0.0",
   "description": "Fast and easy to use opensearch connection and operations scripts",
+  "author": "Andrea Francesco Speziale",
+  "private": false,
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreafspeziale/opensearch-scripts"
+  },
+  "bugs": {
+    "url": "https://github.com/andreafspeziale/opensearch-scripts/issues"
+  },
+  "homepage": "https://github.com/andreafspeziale/opensearch-scripts#readme",
   "scripts": {
+    "prepare": "husky install",
     "build": "tsc",
     "build:watch": "tsc -w",
     "create:index": "ts-node src/index/create.ts",
@@ -21,19 +33,33 @@
     "search",
     "engine"
   ],
-  "author": "Andrea Speziale",
-  "license": "MIT",
+  "engines": {
+    "node": ">=18.5.0"
+  },
+  "packageManager": "pnpm@8.3.1",
   "dependencies": {
-    "@aws-sdk/credential-providers": "^3.301.0",
-    "@opensearch-project/opensearch": "^2.2.0",
+    "@aws-sdk/credential-providers": "^3.321.1",
+    "@opensearch-project/opensearch": "^2.2.1",
     "dotenv": "^16.0.3"
   },
   "devDependencies": {
-    "@tsconfig/node18": "^1.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.57.0",
-    "@typescript-eslint/parser": "^5.57.0",
+    "@commitlint/cli": "17.6.1",
+    "@commitlint/config-conventional": "17.6.1",
+    "@tsconfig/node18": "^1.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
     "eslint-config-airbnb-typescript": "^17.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.4"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.ts": "npm run lint"
   }
 }
