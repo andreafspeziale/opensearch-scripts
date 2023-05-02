@@ -24,28 +24,38 @@ Check the available scripts in the `package.json` scripts section.
 
 - `OPENSEARCH_HOST`
 
+Required: _true_ \
 Description: your opensearch instance host.
 
-- `OPENSEARCH_SERVERLESS`
+- `CONNECTION_METHOD`
 
-Description: sets opensearch client accordingly.
+Required: _true_ \
+Description: sets opensearch client accordingly. \n
+Values: [`local`, `serviceAccount`, `credentials`]
 
-- `CREDENTIALS_FROM_SERVICE_ACCOUNT`
+> `local` when using Docker locally or when using an `AwsSigv4` [proxy](https://github.com/awslabs/aws-sigv4-proxy)
 
-Description: in case scripts are used in a Kubernetes env which leverages service accounts.
+- `AWS_REGION | AWS_DEFAULT_REGION`
 
-- `AWS_ACCESS_KEY`
+Required: when _CONNECTION_METHOD_ is _serviceAccount_ or _credentials_ \
+Description: the AWS region.
 
-Description: in case your are not using Kubernetes and/or service accounts to inject credentilas in your pod.
+- `AWS_ROLE_ARN`
 
-- `AWS_SECRET_KEY`
+Required: when _CONNECTION_METHOD_ is _serviceAccount_ \
+Description: the AWS role ARN injected by the serviceAccount.
 
-Description: in case your are not using Kubernetes and/or service accounts to inject credentilas in your pod.
+- `AWS_WEB_IDENTITY_TOKEN_FILE`
 
-- `AWS_REGION`
+Required: when _CONNECTION_METHOD_ is _serviceAccount_ \
+Description: the AWS web identity toke file injected by the serviceAccount.
 
-Description: in case your are not using Kubernetes and/or service accounts to inject credentilas in your pod.
+- `AWS_ACCESS_KEY_ID`
 
-### Configuration
+Required: when _CONNECTION_METHOD_ is _credentials_ \
+Description: the AWS access key Id.
 
-The `./src/config.ts` file contains some constants that you can change as you wish in order to manage opensearch indexes, docs and queries.
+- `AWS_SECRET_ACCESS_KEY`
+
+Required: when _CONNECTION_METHOD_ is _credentials_ \
+Description: the AWS secret access key.
