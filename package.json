@@ -10,6 +10,7 @@
     "list:index": "ts-node src/index/list.ts",
     "delete:index": "ts-node src/index/delete.ts",
     "create:doc": "ts-node src/document/create.ts",
+    "create:bulk:doc": "ts-node src/document/create-bulk.ts",
     "query:doc": "ts-node src/document/query.ts",
     "count:doc": "ts-node src/document/count.ts",
     "lint": "eslint . --ext .ts --fix"

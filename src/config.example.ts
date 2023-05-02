@@ -30,8 +30,16 @@ export const MAPPING = {
   },
 };
 
-export const DOCS = [{
+export const DOC = {
   title: 'The Häppy Adventures of Hårry Pøtter',
+};
+
+export const DOCS = [{
+  title: "Harry Potter and the Philosopher's Stone",
+}, {
+  title: 'Hårry Pøtter and the Chamber of Secrets',
+}, {
+  title: 'Harry Potter and the Prisoner of Azkaban',
 }];
 
 export const QUERY = {
