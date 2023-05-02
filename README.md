@@ -25,7 +25,7 @@ Check the available scripts in the `package.json` scripts section.
 
 The docker compose has been extracted and simplified from the [official documentation](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/docker/#sample-docker-compose-file-for-development).
 
-### Environment
+## Environment variables
 
 - `OPENSEARCH_HOST`
 
@@ -35,7 +35,7 @@ Description: your opensearch instance host.
 - `CONNECTION_METHOD`
 
 Required: _true_ \
-Description: sets opensearch client accordingly. \n
+Description: sets opensearch client accordingly. \
 Values: [`local`, `serviceAccount`, `credentials`]
 
 > `local` when using Docker locally or when using an `AwsSigv4` [proxy](https://github.com/awslabs/aws-sigv4-proxy)
