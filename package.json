@@ -11,6 +11,7 @@
     "delete:index": "ts-node src/index/delete.ts",
     "create:doc": "ts-node src/document/create.ts",
     "query:doc": "ts-node src/document/query.ts",
+    "count:doc": "ts-node src/document/count.ts",
     "lint": "eslint . --ext .ts --fix"
   },
   "keywords": [
