@@ -10,10 +10,10 @@ Fast and easy to use opensearch connection and operations scripts
 
 > Eventually reload the TS server
 
-- `$ npm i`
-- `$ npm run create:index`
-- `$ npm run create:doc`
-- `$ npm run query:doc`
+- `$ pnpm i`
+- `$ pnpm -s create:index`
+- `$ pnpm -s create:doc`
+- `$ pnpm -s query:doc`
 
 Check the available scripts in the `package.json` scripts section.
 
