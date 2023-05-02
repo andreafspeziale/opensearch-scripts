@@ -1,21 +1,17 @@
 import {
-  INDEX, DOCS, buildClientFromEnv,
+  buildClientFromEnv, INDEX, DOC,
 } from '..';
 
 (async () => {
   try {
     const client = await buildClientFromEnv();
 
-    const promises = DOCS.map((doc) => client.index({
+    const res = await client.index({
       index: INDEX,
-      body: doc,
-    }));
-
-    const results = await Promise.all(promises);
-
-    results.forEach((res) => {
-      console.log('Create document response: ', res.body);
+      body: DOC,
     });
+
+    console.log('Create document response: ', res.body);
   } catch (error) {
     console.error('Error: ', error);
   }
