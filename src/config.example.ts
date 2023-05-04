@@ -1,5 +1,10 @@
 export const INDEX = 'books';
 
+export const REPOSITORY_NAME = 'snapshot-repository';
+export const SNAPSHOT_NAME = 'snapshot';
+export const SNAPSHOT_NAME_NONCE = '0';
+export const WAIT_FOR_COMPLETION = false;
+
 export const SETTINGS = {
   settings: {
     analysis: {

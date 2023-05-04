@@ -6,7 +6,7 @@ import { ClientOptions, ConnectionMethod } from './interfaces';
 
 dotenv.config();
 
-const validateEnv = (env: string | undefined, prop: string) => {
+export const validateEnv = (env: string | undefined, prop: string) => {
   if (!env || env === '') {
     throw new Error(`${prop} is not defined`);
   } else {
@@ -15,7 +15,8 @@ const validateEnv = (env: string | undefined, prop: string) => {
 };
 
 export const getClient = async (options: ClientOptions) => {
-  if (options.connectionMethod === ConnectionMethod.Local) {
+  if (options.connectionMethod === ConnectionMethod.Local
+    || options.connectionMethod === ConnectionMethod.Proxy) {
     return new Client({
       node: options.host,
     });
@@ -54,7 +55,7 @@ export const buildClientFromEnv = async () => {
   const host = validateEnv(process.env.OPENSEARCH_HOST, 'OPENSEARCH_HOST');
   const connectionMethod = validateEnv(process.env.CONNECTION_METHOD, 'CONNECTION_METHOD') as ConnectionMethod;
 
-  if (connectionMethod === ConnectionMethod.Local) {
+  if (connectionMethod === ConnectionMethod.Local || connectionMethod === ConnectionMethod.Proxy) {
     return getClient({
       host,
       connectionMethod,
