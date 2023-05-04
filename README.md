@@ -36,7 +36,7 @@ Description: your opensearch instance host.
 
 Required: _true_ \
 Description: sets opensearch client accordingly. \
-Values: [`local`, `serviceAccount`, `credentials`]
+Values: [`local`, `proxy`, `serviceAccount`, `credentials`]
 
 > `local` when using Docker locally or when using an `AwsSigv4` [proxy](https://github.com/awslabs/aws-sigv4-proxy)
 

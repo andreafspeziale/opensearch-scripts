@@ -5,6 +5,7 @@ services:
     container_name: opensearch
     environment:
       discovery.type: single-node
+      path.repo: /usr/share/opensearch/data/snapshots
       bootstrap.memory_lock: true
       OPENSEARCH_JAVA_OPTS: '-Xms512m -Xmx512m'
       DISABLE_INSTALL_DEMO_CONFIG: true
