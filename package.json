@@ -24,8 +24,11 @@
     "get:index": "ts-node src/index/get.ts",
     "list:index": "ts-node src/index/list.ts",
     "delete:index": "ts-node src/index/delete.ts",
+    "update:index:settings": "ts-node src/index/update-settings.ts",
     "create:doc": "ts-node src/document/create.ts",
     "create:bulk:doc": "ts-node src/document/create-bulk.ts",
+    "delete:doc": "ts-node src/document/delete.ts",
+    "update:doc": "ts-node src/document/update.ts",
     "query:doc": "ts-node src/document/query.ts",
     "count:doc": "ts-node src/document/count.ts",
     "lint": "eslint . --ext .ts --fix"

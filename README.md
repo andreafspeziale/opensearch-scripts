@@ -1,5 +1,7 @@
 # Opensearch scripts
 
+> Recently learned about the existance of the official [opensearch-cli](https://opensearch.org/docs/latest/tools/cli/)
+
 Fast and easy to use opensearch connection and operations scripts
 
 ## Quickstart

@@ -24,6 +24,15 @@ export const SETTINGS = {
   },
 };
 
+export const DYNAMIC_SETTINGS = true;
+export const SETTINGS_UPDATE = {
+  settings: {
+    index: {
+      knn: true,
+    },
+  },
+};
+
 export const MAPPING = {
   mappings: {
     properties: {
@@ -39,6 +48,13 @@ export const DOC = {
   title: 'The Häppy Adventures of Hårry Pøtter',
 };
 
+export const UPDATE_DOC = {
+  id: '',
+  body: {
+    title: "Hårry Pøtter and the Philosopher's Stone",
+  },
+};
+
 export const DOCS = [{
   title: "Harry Potter and the Philosopher's Stone",
 }, {
@@ -46,6 +62,8 @@ export const DOCS = [{
 }, {
   title: 'Harry Potter and the Prisoner of Azkaban',
 }];
+
+export const DELETE_DOC_ID = '';
 
 export const QUERY = {
   query: {
