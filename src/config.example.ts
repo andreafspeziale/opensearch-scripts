@@ -48,13 +48,6 @@ export const DOC = {
   title: 'The Häppy Adventures of Hårry Pøtter',
 };
 
-export const UPDATE_DOC = {
-  id: '',
-  body: {
-    title: "Hårry Pøtter and the Philosopher's Stone",
-  },
-};
-
 export const DOCS = [{
   title: "Harry Potter and the Philosopher's Stone",
 }, {
@@ -62,6 +55,15 @@ export const DOCS = [{
 }, {
   title: 'Harry Potter and the Prisoner of Azkaban',
 }];
+
+export const MDOCS = [{ _id: '' }];
+
+export const UPDATE_DOC = {
+  id: '',
+  body: {
+    doc: { title: "Hårry Pøtter and the Philosopher's Stone" },
+  },
+};
 
 export const DELETE_DOC_ID = '';
 
