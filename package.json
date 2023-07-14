@@ -1,6 +1,6 @@
 {
   "name": "opensearch-scripts",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.0",
   "description": "Fast and easy to use opensearch connection and operations scripts",
   "author": "Andrea Francesco Speziale",
   "private": false,
