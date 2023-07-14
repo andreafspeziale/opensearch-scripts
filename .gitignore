@@ -3,3 +3,4 @@ dev-ws
 dist
 node_modules
 config.ts
+docker-compose-es.yml
